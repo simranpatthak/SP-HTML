@@ -1,0 +1,62 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.main
+{
+    background-color: black;
+    /* overflow: hidden; */
+    margin: 0%;
+    height:60px;
+}
+.main2 .mainlist
+{
+    float: left;
+    text-decoration: none;
+    list-style: none;
+    margin-top:0%;
+    font-size: 25px;
+    
+
+}
+.mainlist a 
+{
+    padding: 10px 20px;
+   
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    line-height: 60px;
+}
+.sub
+{
+    display: none;
+    background-color: gray;
+    color:darkred;
+    list-style: none;
+    width: 100%;
+
+}
+.mainlist:hover .sub
+{
+    display: block;
+}
+.menu
+{
+    float: left;
+    text-decoration: none;
+    list-style: none;
+    margin-top:0%;
+    font-size: 25px;
+    display: none;
+    position:absolute;
+    left: 30%;
+    width:5%;
+    top:8%;
+}
+.sublist:hover .menu
+{
+    display:inline;
+}
