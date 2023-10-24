@@ -1,0 +1,63 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.main
+{
+  width: 80%;
+  margin:5% auto;
+  display: grid;
+  
+  grid-template-rows:100px 300px 300px 300px ;
+  grid-template-columns: repeat(3,400px)1fr;
+  gap: 20px;
+}
+.header
+{
+  background-color: darkred;
+  grid-column:1/-1;
+}
+.Box1
+{
+    background-color:darkred;
+    grid-column:1/2;
+ 
+    
+
+}
+.Box2
+{
+   background-color:darkred;
+   
+}
+.Box3
+{ 
+    background-color:darkred;
+
+}
+
+.Side
+{
+   background-color: darkred;
+   grid-row:2/4;
+}
+.man
+{
+   background-color:darkred;
+   grid-column: 1/4;
+   grid-row: 3/4;
+   
+}
+
+.footer
+{ 
+    background-color:darkred;
+    grid-column: 1/5;
+    
+
+
+
+}
+
