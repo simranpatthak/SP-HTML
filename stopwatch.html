@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="get()">Start</button>
+    <h1 id="time"></h1>
+    <button onclick="get()">Stop</button>
+    <script>
+        function get()
+        
+        {   let watch = new Date();
+            document.getElementById("time").innerHTML= watch;
+        }
+        let inter= setInterval(get,1000);
+        btn=addEventListener("click",function()
+        {
+            clearInterval(inter);
+        })
+    </script>
+</body>
+</html>
