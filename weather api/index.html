@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container{
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      gap:20px;
+      /* background-color: aqua; */
+    }
+    .container .decore{
+      background-color: #77B0AA;
+      border: 1px solid gray;
+      margin-left: 20px;
+      color: #135D66;
+      border-radius: 5px;
+      font-size: 20px;
+      padding: 10px;
+    }
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+</div>
+</body>
+</html>
+<script>
+  
+function fetchdata(){
+ fetch('https://reqres.in/api/users?page=2')
+.then(response => response.json())
+.then(data => Cardlist(data.data))
+.catch(error => console.log(error));
+}
+
+fetchdata();
+
+function Cardlist(data){
+let store=data.map((el)=>SingleCard (el.id,el.email,el.discharged,el.last_name,el.avatar,el.first_name));
+
+  document.querySelector(".container").innerHTML=store.join("")
+}
+
+     
+function SingleCard (id,email,discharged,last_name,avatar,first_name)
+{
+    let card=`
+    <div class="decore">
+      <p>Location:${id}</p>
+      <p>Confirmed Indian Cases:${email}</p>
+      <p>Discharged:${first_name}${last_name}</p>
+      <img src=${avatar}>
+    </div>`;
+        return card;
+
+}
+
+
+</script> 
+</script>
