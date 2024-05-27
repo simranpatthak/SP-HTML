@@ -4,91 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-   
+    <style>
+        body{
+            background-color:#31363F;
+        }
+        img{
+          
+            width:50%; 
+            height: 500px;
+            margin-top: 100px;
+            margin-left:29%;
+            border-radius: 20px 30px;
+            border: 2px solid white;
+        }
+        h3{
+            
+            text-align: center;
+            font-size: 45px;
+            color: #526D82;
+            position: absolute;
+            margin-top: 35px;
+            margin-left: 45%;
+            text-shadow: 1px 1px 1px 1px #526D82;
+            
+        }
+    </style>
 </head>
-<style>
-    .formstyle
-    {
-        background-color:black; 
-        width: 340px;
-        border-radius: 25px;
-        height: 550px;
-        margin: 3% auto;
-        overflow: hidden;
-        box-shadow: 8px 12px 15px #5c1010,
-                    -5px -5px 15px 	#5c1010;
-    }
-    .div
-    {
-        margin-left: 3%;
-        margin-top: 15%;
-        width: 270px;
-        height: 273px;
-        width: 100%;
-        border-radius: 10px;
-        padding: 19px 30px;
-        background-color: transparent;
-    }
-    body{
-         background-image: url(img/bakddd.jpg);
-        /* background-repeat: no-repeat; */
-        height: 100vh;
-        /* width:500px; */
-    }
-    
-</style>
+
 <body>
-
-    <div class="heading">
-        <h1 style="color:hsl(0, 24%, 30%); text-align: center;">Button Calculator </h1>
-        <p style="color: rgb(66, 59, 59);text-align: center; margin-top: -2%; font-size: 25px;">User interface</p>
-        <p style="color: rgb(66, 59, 59); text-align: center;margin-top: -2%;">Dark mode</p>
-    </div>
-    <div data-aos="zoom-in">
-    <div class="formstyle">
-        <form name="forms">
-           
-            <input type="text" name="answer" style="width: 329px; margin-left: 0.5%; height: 120px; margin-top: 15%;background-color:transparent;border-radius: 10px; color: #ADBC9F;font-size: 40px;border: 1px  solid #5c1010; box-shadow: 1px 2px #5c1010;" disabled><br>
-
-           <div class="div">
-            <input type="button" value="Ac" onclick="forms.answer.value =''" style="width: 60px;height: 45px; font-size: 20px; color:#ADBC9F; border-radius: 10px; background-color: #5c1010;">
-            <input type="button" value=" Del " onclick="forms.answer.value =forms.answer.value.slice(0,-1)"style="width:60;height: 45px;font-size: 20px; color:#ADBC9F; border-radius:10px;background-color:#5c1010;">
-            <input type="button" value="00" onclick="forms.answer.value +='00'" style="width: 60px;height: 45px;font-size: 20px;border-radius: 10px;color: #ADBC9F;background-color:  #5c1010;">
-            <input type="button" value=" / " onclick="forms.answer.value +='/'" style="width: 60px;height: 45px;font-size: 20px;border-radius: 10px;color: #ADBC9F;background-color:	#380000"> <br>
-
-            <input type="button" value=" 1 " onclick="forms.answer.value +='1'"style="width: 60px;height: 45px;border-radius: 10px;font-size: 20px;color:#ADBC9F;background-color:#5c1010;margin-top:10px;">
-            <input type="button" value=" 2 " onclick="forms.answer.value +='2'"style="width: 60px;height: 45px;border-radius: 10px;font-size: 20px;color:#ADBC9F;background-color:#5c1010;">
-            <input type="button" value=" 3 " onclick="forms.answer.value +='3'"style="width: 60px;height: 45px;border-radius: 10px;font-size: 20px;color:#ADBC9F;background-color:#5c1010;">
-            <input type="button" value=" * " onclick="forms.answer.value +='*'"style="width: 60px;height: 45px;border-radius: 10px;font-size: 20px;color:#ADBC9F;background-color:	#380000;"><br>
-
-            <input type="button" value=" 4 " onclick="forms.answer.value +='4'"style="width: 60px;height: 45px;border-radius: 10px;color:#ADBC9F;font-size: 20px;background-color:#5c1010;margin-top:10px;">
-            <input type="button" value=" 5 " onclick="forms.answer.value +='5'"style="width: 60px;height: 45px;border-radius: 10px;color:#ADBC9F;font-size: 20px;background-color:#5c1010;">
-            <input type="button" value=" 6 " onclick="forms.answer.value +='6'"style="width: 60px;height: 45px;border-radius: 10px;color:#ADBC9F;font-size: 20px;background-color:#5c1010;">
-            <input type="button" value=" - " onclick="forms.answer.value +='-'"style="width: 60px;height: 45px;border-radius: 10px;color:#ADBC9F;font-size: 20px;background-color:#380000;"><br>
-
-            <input type="button" value=" 7 " onclick="forms.answer.value +='7'"style="width: 60px;height: 45px;border-radius: 10px;color: #ADBC9F;font-size: 20px;background-color:#5c1010;margin-top:10px;">
-            <input type="button" value=" 8 " onclick="forms.answer.value +='8'"style="width: 60px;height: 45px;border-radius: 10px;color: #ADBC9F;font-size: 20px;background-color:#5c1010;">
-            <input type="button" value=" 9 " onclick="forms.answer.value +='9'"style="width: 60px;height: 45px;border-radius: 10px;color: #ADBC9F;font-size: 20px;background-color:#5c1010;">
-            <input type="button" value=" + " onclick="forms.answer.value +='+'"style="width: 60px;height: 45px;border-radius: 10px;color: #ADBC9F;font-size: 20px;background-color:	#380000;"><br>
-
-            <input type="button" value=" % " onclick="forms.answer.value +='%'"style="width: 60px;height: 45px;border-radius: 10px;color: #ADBC9F;font-size: 20px;background-color:	#380000;margin-top:10px;">
-            <input type="button" value=" 0 " onclick="forms.answer.value +='0'"style="width: 60px;height: 45px;border-radius: 10px;color: #ADBC9F;font-size: 20px;background-color:	#380000;">
-            <input type="button" value=" . " onclick="forms.answer.value +='.'"style="width: 60px;height: 45px;border-radius: 10px;color: #ADBC9F;font-size: 20px;background-color:	#380000;">
-            <input type="button" value=" = " onclick="forms.answer.value=eval(forms.answer.value.replace('%','/100*'))"style="width: 60px;height: 45px;border-radius: 10px;color: #ADBC9F;font-size: 20px;background-color:	#380000;"><br>
-
-
-        </div>
-    </div>
-           </div>
-        </div>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-        offset:300,
-        animationduration:4000
-    });
-  </script>
+    <h3>Mercedes Benz....</h3>
+     <img src="" alt="">
 </body>
 </html>
+<script>
+    let image=["https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?cs=srgb&dl=pexels-mikebirdy-112460.jpg&fm=jpg",
+    "https://i.pinimg.com/736x/99/29/4d/99294dbedb1566ee67760b83990ebad9.jpg",
+    "https://i.pinimg.com/736x/7e/d9/6c/7ed96c232108f09d8679b8e72a497f55.jpg"]
+
+    let index=0;
+       setInterval(() => {
+           index=(index+1)% image.length;
+          document.querySelector("img").src=image[index]
+       }, 2000);
+    
+</script>
