@@ -4,47 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            background-color:#31363F;
-        }
-        img{
-          
-            width:50%; 
-            height: 500px;
-            margin-top: 100px;
-            margin-left:29%;
-            border-radius: 20px 30px;
-            border: 2px solid white;
-        }
-        h3{
-            
-            text-align: center;
-            font-size: 45px;
-            color: #526D82;
-            position: absolute;
-            margin-top: 35px;
-            margin-left: 45%;
-            text-shadow: 1px 1px 1px 1px #526D82;
-            
-        }
-    </style>
+<style>
+
+* {
+        margin: 0;
+        padding: 0;
+      }
+
+      #clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #135D66;
+        /* direction,color1,color2...link--- */
+      }
+
+      #clock > div {
+        padding: 30px;
+        margin: 30px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        box-shadow: 5px 5px 23px #135D66, -5px -5px 23px #135D66;
+      }
+
+      span {
+        font-size: 40px;
+      }
+      h3{
+        position: absolute;
+        margin-top: 230px;
+        margin-left: 420px;
+        font-size: 25px;
+        color:#003C43;
+        width: 50%;
+        background-color:#77B0AA;
+        z-index: 1;
+        text-align: center;
+      }
+      h1{
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 550px;
+      }
+    
+</style>
 </head>
 
 <body>
-    <h3>Mercedes Benz....</h3>
-     <img src="" alt="">
+  <h1>Human thought changes every second</h1>
+    <h3></h3>
+    <div id="clock">
+        <div id="hours" style="color: #77B0AA;">13</div>
+        <span>:</span>
+        <div id="minutes"style="color: #77B0AA;">13</div>
+        <span>:</span>
+        <div id="seconds"style="color: #77B0AA;">13</div>
+        <div id="half"style="color: #77B0AA;">PM</div>
+      </div>
+    <script>
+     
+        let quotes=["Our greatest glory is not in never falling, but in rising every .",
+"I can accept failure, everyone fails at something.","Failure is simply the opportunity to begin again, this time ."]
+
+       let index=0;
+       setInterval(() => {
+           index=(index+1)% quotes.length;
+          document.querySelector("h3").innerText=quotes[index]
+       }, 1000);
+
+
+       setInterval(() => {
+    
+    let date=new Date() 
+    {
+        if(date.getHours>=12){
+        document.getElementById("half").innerText="AM"
+    }else
+    {
+        document.getElementById("half").innerText="PM"
+    }
+    }
+    document.getElementById("hours").innerText=date.getHours(); 
+    document.getElementById("minutes").innerText=date.getMinutes(); 
+    document.getElementById("seconds").innerText=date.getSeconds(); 
+}, 1000);
+    </script>
+  
 </body>
 </html>
-<script>
-    let image=["https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?cs=srgb&dl=pexels-mikebirdy-112460.jpg&fm=jpg",
-    "https://i.pinimg.com/736x/99/29/4d/99294dbedb1566ee67760b83990ebad9.jpg",
-    "https://i.pinimg.com/736x/7e/d9/6c/7ed96c232108f09d8679b8e72a497f55.jpg"]
-
-    let index=0;
-       setInterval(() => {
-           index=(index+1)% image.length;
-          document.querySelector("img").src=image[index]
-       }, 2000);
-    
-</script>
